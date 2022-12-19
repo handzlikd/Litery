@@ -1,0 +1,45 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+
+	public static void main(String[] args)  {
+	    
+	    Scanner scanWord = new Scanner(System.in);
+	    System.out.println("Podaj słowo");
+	    String word = scanWord.next();
+	    
+	    int licznik = 0;
+	    
+	     char tablica[] = new char[word.length()];
+	     
+	     String podkreslenie = "_";
+	     char podkr = podkreslenie.charAt(0);
+	     
+	       for(int a=0; a<word.length(); a++){
+	            tablica[a] = podkr;
+	            System.out.print(tablica[a] + " ");
+	        } 
+	        
+	      
+	          while(licznik < word.length())  {
+	              Scanner scanLit = new Scanner(System.in);
+	              System.out.println("Podaj literę");
+	              String scanLitera = scanLit.next();
+	              char litera = scanLitera.charAt(0);
+	              
+	                    for(int i=0; i<word.length(); i++){
+	                        if(litera == word.charAt(i)){
+	                           tablica[i] = word.charAt(i);
+	                           licznik++; }
+	                        }
+	                        
+	                        
+	                          for(int b=0; b<word.length(); b++){
+	                            System.out.print(tablica[b] + " ");
+	                          
+	                          }
+                    
+	          }
+}
+}
